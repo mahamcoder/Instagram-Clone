@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/stylesheets/edit.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+</head>
+<body>
+    <h2>Edit Profile</h2>
+    <div class="container">
+        <div class="main-div">
+            <div class="img" >
+                <img src="/images/uploads/<%= user.profileimage%>" alt="">
+                <div class="data">
+                    <h5><%= user.username%></h5>
+                    <span><%= user.name%></span>
+                </div>
+            </div>
+            <form action="/edit" method="post" enctype="multipart/form-data">
+            <div class="chosefile">
+                <label for="Edit Photo" class="edit"><i class="ri-image-edit-fill"></i>Edit Photo</label>
+                <input type="file" name="image" id="Edit Photo" hidden>
+            </div>
+        </div>
+    </div>
+    <div class="other">
+            <label for="">username</label>
+            <input type="text" placeholder="username" name="username" value="<%= user.username%>">
+            <label for="">Name</label>
+            <input type="text" placeholder="name" name="name" value="<%= user.name%>">
+            <label for="">Bio</label>
+            <input type="text" placeholder="Bio" name="bio" value="<%= user.bio%>">
+            <button class="btn" type="submit"><i class="ri-inbox-archive-line"></i>Save Changes</button>
+        </form>
+    </div>
+    
+   
+</body>
+</html>

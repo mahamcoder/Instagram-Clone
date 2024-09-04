@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+<link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+<body>
+  <div class="container">
+    <div class="box">
+      <div class="heading">
+        <img src="/images/uploads/inst.png" alt="">
+      </div>
+      <% if(error.length > 0){%>
+        <p style="color: red;font-size: 15px;"><%= error%></p>
+      <% } %>
+      <form action="/login" method="post">
+        <input type="text" placeholder="username" name="username">
+        <input type="password" placeholder="pasword" name="password">
+        <button type="submit">Login</button>
+        <div class="seprate">
+          <div class="line"></div>
+          <p>Or</p>
+          <div class="line"></div>
+        </div>
+        <div class="fb">
+          <i class="ri-facebook-circle-fill fb-icon"></i>
+          <p>sign up with facebook</p>
+        </div>
+        <div class="forget">
+          <a href="http://"> forget your password?</a>
+        </div>
+      </form>
+    </div>
+    <div class="box2">
+      <p>Already have an account? <a href="/">Signup</a></p>
+    </div>
+  </div>
+</body>
+</html>
